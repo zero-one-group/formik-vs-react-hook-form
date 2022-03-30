@@ -1,0 +1,28 @@
+{
+  "root": "apps/compare-e2e",
+  "sourceRoot": "apps/compare-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/compare-e2e/cypress.json",
+        "devServerTarget": "compare:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "compare:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/compare-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["compare"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "compare": "apps/compare",
+    "compare-e2e": "apps/compare-e2e"
+  }
+}
